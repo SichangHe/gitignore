@@ -1,5 +1,6 @@
 # Artifacts
 **.dart_tool/
+**.flutter*
 **.ipynb_checkpoints/
 **__pycache__/
 **build/
