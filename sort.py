@@ -1,49 +1,52 @@
 #!/usr/bin/env python3
-Section = tuple[str, list[str]]
+Sections = dict[str, set[str]]
 
 L = "\n"
 
 
-def make_section(section: Section | None, line: str) -> tuple[bool, Section | None]:
+def make_section(
+    sections: Sections, section: set[str] | None, line: str
+) -> set[str] | None:
     line = line.strip()
     if section is None:
         if line.startswith("#"):
             # Start of new section.
-            return False, (line, [])
+            sections[line] = set()
+            return sections[line]
         else:
             # No section yet.
-            return False, None
+            return None
     else:
         if len(line) == 0:
             # Empty line, end of section.
-            return True, section
+            return None
         else:
             # Add line to section.
-            section[1].append(line)
-            return False, section
+            section.add(line)
+            return section
 
 
 def main():
-    sections: list[Section] = []
-    section: Section | None = None
+    sections: Sections = {}
+    section: set[str] | None = None
 
     def add_line(line: str):
         nonlocal section, sections
-        append, section = make_section(section, line)
-        if append:
-            assert section is not None
-            sections.append(section)
-            section = None
+        section = make_section(sections, section, line)
 
     with open(".gitignore", "r") as fd:
         for line in fd.read().splitlines():
             add_line(line)
         add_line("")
 
-    sections.sort(key=lambda s: s[0])
-    for section in sections:
-        section[1].sort()
-    sorted = "\n\n".join(f"{head}\n{L.join(body)}" for head, body in sections)
+    sections_list = list(sections.items())
+    sections_list.sort(key=lambda s: s[0])
+    sorted_sections = []
+    for head, body in sections_list:
+        section_list = list(body)
+        section_list.sort()
+        sorted_sections.append(f"{head}\n{L.join(section_list)}")
+    sorted = "\n\n".join(sorted_sections)
 
     with open(".gitignore", "w") as fd:
         fd.write(sorted)
