@@ -2,6 +2,7 @@
 **.dart_tool/
 **.flutter*
 **.ipynb_checkpoints/
+**.pyc
 **__pycache__/
 **build/
 
@@ -14,9 +15,11 @@
 **.sqlite*
 
 # Documents
+**.csv
 **.doc*
 **.pdf
 **.ppt*
+**.txt
 **.vsd*
 **.xls*
 
@@ -66,10 +69,15 @@
 **.bbl
 **.bcf
 **.blg
+**.dvi
 **.fdb_latexmk
 **.fls
+**.gz
 **.log
 **.out
+**.pdf
 **.synctex.gz
+**.xcp
 **.xml
 **blx.bib
+**comment.cut
