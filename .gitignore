@@ -73,10 +73,13 @@
 **.fdb_latexmk
 **.fls
 **.gz
+**.lof
 **.log
+**.lot
 **.out
 **.pdf
 **.synctex.gz
+**.toc
 **.xcp
 **.xdv
 **.xml
