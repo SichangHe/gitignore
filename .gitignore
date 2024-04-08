@@ -2,9 +2,11 @@
 **.dart_tool/
 **.flutter*
 **.ipynb_checkpoints/
+**.lock
 **.pyc
 **__pycache__/
 **build/
+**target/
 
 # Auxiliary files
 **.bak
