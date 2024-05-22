@@ -18,17 +18,24 @@
 **.zst
 
 # Artifacts
-**.dSYM/
-**.dart_tool/
 **.flutter*
-**.ipynb_checkpoints/
 **.lock
 **.o
 **.pyc
 **.so
-**__pycache__/
-**build/
-**target/
+**/.dSYM/
+**/.dart_tool/
+**/.idea/
+**/.ipynb_checkpoints/
+**/__pycache__/
+**/build/
+**/node_modules/
+**/package-lock.json
+**/target/
+**/venv/
+
+# Audio
+**.wav
 
 # Auxiliary files
 **.bak
@@ -41,6 +48,7 @@
 # Documents
 **.csv
 **.doc*
+**.html
 **.pdf
 **.ppt*
 **.txt
@@ -108,3 +116,8 @@
 **.xdv
 **blx.bib
 **comment.cut
+
+# Video
+**.mkv
+**.mov
+**.mp4
