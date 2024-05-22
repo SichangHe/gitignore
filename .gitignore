@@ -1,4 +1,24 @@
+# Archive
+**.7z
+**.bz2
+**.gz
+**.gzip
+**.jar
+**.lz4
+**.lzma
+**.pak
+**.rar
+**.tar
+**.tbz2
+**.tgz
+**.tlz
+**.txz
+**.xz
+**.zip
+**.zst
+
 # Artifacts
+**.dSYM/
 **.dart_tool/
 **.flutter*
 **.ipynb_checkpoints/
@@ -76,16 +96,15 @@
 **.dvi
 **.fdb_latexmk
 **.fls
-**.gz
 **.lof
 **.log
 **.lot
 **.out
 **.pdf
+**.run.xml
 **.synctex.gz
 **.toc
 **.xcp
 **.xdv
-**.xml
 **blx.bib
 **comment.cut
