@@ -60,6 +60,7 @@
 
 # Auxiliary files
 **.bak
+**.env
 **.swp
 **.tmp
 
