@@ -107,7 +107,6 @@
 **.max
 **.mj2
 **.mng
-**.pdf
 **.png
 **.raw
 **.svg
@@ -131,7 +130,6 @@
 **.log
 **.lot
 **.out
-**.pdf
 **.run.xml
 **.synctex.gz
 **.toc
